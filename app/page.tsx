@@ -1,9 +1,7 @@
 'use client';
 
 import Feed from '@components/Feed'
-import { getUserState } from '@redux/getUserState';
 import React from 'react'
-import { useSelector } from 'react-redux';
 
 
 interface PostProps {

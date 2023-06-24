@@ -11,7 +11,7 @@ import { getUserState } from '@redux/getUserState';
 
 export interface PostProps {
   post: {
-    _id: number;
+    _id: string;
     content: string;
     tag: string;
     name: string;

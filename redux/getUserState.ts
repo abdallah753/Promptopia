@@ -1,1 +1,2 @@
-export const getUserState = (state) => state.user 
+'use client'
+export const getUserState = (state: any) => state.user 

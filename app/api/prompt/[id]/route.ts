@@ -2,12 +2,12 @@ import dbConnect from "@lib/dbConnect"
 import Prompt from "@models/prompt"
 
 
-export const GET = async (request : Request,  { params } : {params : {id: string}}) => {
+export const GET = async ( request :Request , { params } : {params : {id: string}}) => {
     try {
         await dbConnect()
 
         const prompt = await Prompt.find({email : params.id})
-        console.log()
+
         if (!prompt) return new Response("Prompt Not Found", { status: 404 });
 
         return new Response(JSON.stringify(prompt), { status: 200 })
@@ -39,7 +39,7 @@ export const PATCH = async (request :Request,  { params } : {params : {id: strin
     }
 };
 
-export const DELETE = async (request : Request ,   { params } : {params : {id: string}}) => {
+export const DELETE = async ( request :Request , { params } : {params : {id: string}} ) => {
     try {
         await dbConnect();
         await Prompt.findByIdAndRemove(params.id);

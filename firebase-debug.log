@@ -1,0 +1,21 @@
+[debug] [2023-06-22T12:03:44.964Z] ----------------------------------------------------------------------
+[debug] [2023-06-22T12:03:44.966Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\abdal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-06-22T12:03:44.967Z] CLI Version:   12.4.0
+[debug] [2023-06-22T12:03:44.967Z] Platform:      win32
+[debug] [2023-06-22T12:03:44.967Z] Node Version:  v20.2.0
+[debug] [2023-06-22T12:03:44.967Z] Time:          Thu Jun 22 2023 15:03:44 GMT+0300 (Eastern European Summer Time)
+[debug] [2023-06-22T12:03:44.967Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-22T12:03:44.972Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-22T12:03:44.972Z] > authorizing via signed-in user (abdallahram777@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\abdal\Next-projects\promptopia
+

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { login } from '@redux/slices/UserSlice';
 import Image from 'next/image';
+import { putInWindow } from '@lib/putInWindow';
 
 function SignUp() {
   const [name, setName] = useState<String>('');
@@ -25,7 +26,7 @@ function SignUp() {
       try {
         setLoading(true)
       const response = await axios.post('http://localhost:3000/api/users/signup', user);
-      window.localStorage.setItem('user' , JSON.stringify(response.data.result))
+      putInWindow(response.data.result)
       dispatch(login(response.data.result))
       router.replace('/');
     } catch (error) {

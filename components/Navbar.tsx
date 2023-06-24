@@ -2,6 +2,7 @@
 
 import { getUserState } from '@redux/getUserState';
 import { logout } from '@redux/slices/UserSlice';
+import Cookies from 'js-cookie';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,7 +12,7 @@ function Navbar() {
   const dispatch = useDispatch()
   const {isLoggedIn} = useSelector(getUserState)
   const handelSignOut = () => {
-    window.localStorage.clear()
+    Cookies.remove('user')
     dispatch(logout())
   }
   return (
@@ -27,7 +28,7 @@ function Navbar() {
         <p className='logo_text'>Promptopia</p>
       </Link>
       {isLoggedIn ? <div className='flex gap-2'>
-        <Link href='create-post' className='black_btn'>Create Post</Link>
+        <Link href='/create-post' className='black_btn'>Create Post</Link>
         <button className='outline_btn' onClick={handelSignOut}>Sign Out</button>
         <Link href='/profile'><Image
           src='/assets/images/logo.svg'

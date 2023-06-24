@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import React, { FormEvent, useState } from 'react'
 
+
 function Update() {
   const [content, setContent] = useState('')
   const [tag, setTag] = useState('')
@@ -16,7 +17,7 @@ function Update() {
       e.preventDefault()
       setLoding(true)
       try{
-        const res = await fetch(`/api/prompt/${param.id}`, {
+        const res = await fetch(`/api/prompt/${param?.id}`, {
           method: "PATCH",
           body: JSON.stringify({content, tag})
         })

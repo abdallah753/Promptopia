@@ -62,7 +62,7 @@ function Feed() {
         </form>
       </section>
       <div className={`grid  gap-4 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3`}>
-        {isLoggedIn? posts.map((post) => {
+        {isLoggedIn? posts.map((post : PostProps) => {
           return <PromptCard key={post._id} post={post} />
         }) : ''}
         {loading? <div className='pt-12'>

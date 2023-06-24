@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 
 interface PostProps {
-    id: string;
+    _id: string;
     content: string;
     tag: string;
     name: string;
@@ -20,10 +20,10 @@ function Profile () {
   const [posts , setPosts] = useState([])
   const [loding , setLoding] = useState(true)
 
-  useEffect( () => {
+  useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await fetch(`/api/prompt/${user.email}`);
+        const res = await fetch(`/api/prompt/${user?.email}`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -36,7 +36,7 @@ function Profile () {
       }
     }
     getPosts()
-  } , [])
+  } , [user?.email])
   
   return (
     <section className="w-full">
